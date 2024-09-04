@@ -239,14 +239,14 @@ function prev(){
         currentIndex = 0; // Reset to the beginning
     }
 
-    if (currIndex <= 0) {
+    if (currentIndex <= 0) {
         return
     }
 
     const currentWord = words[currentIndex];
-    currWord.innerHTML = `<li> <strong> ${currentWord.word} </strong>
-    (${currentWord.pronunciation}) :  </br> 
-    <section>${currentWord.definition} </section>
+    currWord.innerHTML = `<li> <strong> ${currentWord?.word} </strong>
+    (${currentWord?.pronunciation}) :  </br> 
+    <section>${currentWord?.definition} </section>
     [FR] : ${currentWord?.french} </li>`;
     currentIndex--;
     currIndex.innerHTML = `<h3> ${currentIndex} </h3>`
@@ -258,9 +258,9 @@ function next() {
     }
 
     const currentWord = words[currentIndex];
-    currWord.innerHTML = `<li> <strong> ${currentWord.word} </strong>
-    (${currentWord.pronunciation}) :  </br> 
-    <section>${currentWord.definition} </section>
+    currWord.innerHTML = `<li> <strong> ${currentWord?.word} </strong>
+    (${currentWord?.pronunciation}) :  </br> 
+    <section>${currentWord?.definition} </section>
     [FR] : ${currentWord?.french} </li>`;
     currentIndex++;
     currIndex.innerHTML = `<h3> ${currentIndex} </h3>`
