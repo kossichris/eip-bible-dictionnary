@@ -195,7 +195,7 @@ const wordList = document.getElementById('wordList');
 const currWord = document.getElementById('currentWord');
 const currIndex = document.getElementById('indexWord');
 
-let currentIndex = 0;
+let currentIndex = 1;
 let intervalId;
 
 function displayWords(wordArray) {
@@ -219,7 +219,7 @@ function searchWord() {
 // Function to display words one by one every 5 minutes
 function displayWordsWithInterval() {
     if (currentIndex >= words.length) {
-        currentIndex = 0; // Reset to the beginning
+        currentIndex = 1; // Reset to the beginning
     }
 
     const currentWord = words[currentIndex];
@@ -236,10 +236,10 @@ function displayWordsWithInterval() {
 
 function prev(){
     if (currentIndex >= words.length) {
-        currentIndex = 0; // Reset to the beginning
+        currentIndex = 1; // Reset to the beginning
     }
 
-    if (currentIndex <= 0) {
+    if (currentIndex <= 1) {
         return
     }
 
@@ -254,7 +254,7 @@ function prev(){
 
 function next() { 
     if (currentIndex >= words.length) {
-        currentIndex = 0; // Reset to the beginning
+        currentIndex = 1; // Reset to the beginning
     }
 
     const currentWord = words[currentIndex];
