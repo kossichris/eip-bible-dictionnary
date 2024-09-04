@@ -9,7 +9,7 @@ body {
     max-width: 600px;
     margin: auto;
     background: white;
-    padding: 86px;
+    padding: 23px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -19,7 +19,7 @@ h1 {
 }
 
 input {
-    width: 100%;
+    width: 94%;
     padding: 10px;
     margin-bottom: 20px;
     border: 1px solid #ccc;
@@ -34,6 +34,11 @@ ul {
 li {
     padding: 10px;
     border-bottom: 1px solid #eee;
+
+}
+
+li strong {
+    margin-bottom: 23px
 }
 
 li:last-child {

@@ -196,12 +196,12 @@ let currentIndex = 0;
 let intervalId;
 
 function displayWords(wordArray) {
-    wordList.innerHTML = '';
+    wordList.innerHTML = ''; // Clear the existing list
     wordArray.forEach(item => {
         const li = document.createElement('li');
-        li.textContent = `${item.word} 
-        (${item.pronunciation}) : ${item.definition}
-        ===> ${item?.french} `;
+        li.innerHTML = `<strong>${item.word}</strong> (${item.pronunciation}): 
+        
+        ${item.definition} ===> ${item.french}`;
         wordList.appendChild(li);
     });
 }
@@ -219,8 +219,8 @@ function displayWordsWithInterval() {
     }
 
     const currentWord = words[currentIndex];
-    wordList.innerHTML = `<li>${currentWord.word }
-    (${ currentWord.pronunciation}) : ${currentWord.definition }
+    wordList.innerHTML = `<li> <strong> ${currentWord.word } </strong>
+    (${ currentWord.pronunciation}) :  </br> ${currentWord.definition }
     ===> ${ currentWord?.french } </li>`;
     currentIndex++;
 
