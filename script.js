@@ -235,8 +235,12 @@ function displayWordsWithInterval() {
 }
 
 function prev(){
-    if (currentIndex >= words.length || currIndex <= 0) {
+    if (currentIndex >= words.length) {
         currentIndex = 0; // Reset to the beginning
+    }
+
+    if (currIndex <= 0) {
+        return
     }
 
     const currentWord = words[currentIndex];
