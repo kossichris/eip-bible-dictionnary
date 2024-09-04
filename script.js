@@ -192,6 +192,9 @@ const words = [
 ];
 
 const wordList = document.getElementById('wordList');
+const currWord = document.getElementById('currentWord');
+const currIndex = document.getElementById('indexWord');
+
 let currentIndex = 0;
 let intervalId;
 
@@ -201,7 +204,8 @@ function displayWords(wordArray) {
         const li = document.createElement('li');
         li.innerHTML = `<strong>${item.word}</strong> (${item.pronunciation}): 
         
-        ${item.definition} ===> ${item.french}`;
+        <section> ${item.definition} </section>  
+        [FR] : ${item.french}`;
         wordList.appendChild(li);
     });
 }
@@ -219,13 +223,43 @@ function displayWordsWithInterval() {
     }
 
     const currentWord = words[currentIndex];
-    wordList.innerHTML = `<li> <strong> ${currentWord.word } </strong>
-    (${ currentWord.pronunciation}) :  </br> ${currentWord.definition }
-    ===> ${ currentWord?.french } </li>`;
+    currWord.innerHTML = `<li> <strong> ${currentWord.word } </strong>
+    (${ currentWord.pronunciation}) :  </br> 
+    <section>${ currentWord.definition } </section>
+    [FR] : ${ currentWord?.french } </li>`;
     currentIndex++;
+    currIndex.innerHTML = `<h3> ${currentIndex} </h3>`
 
     // Set a timeout for the next word
-    intervalId = setTimeout(displayWordsWithInterval, 10000); // 300000 ms = 5 minutes
+    intervalId = setTimeout(displayWordsWithInterval, 30000); // 300000 ms = 5 minutes
+}
+
+function prev(){
+    if (currentIndex >= words.length) {
+        currentIndex = 0; // Reset to the beginning
+    }
+
+    const currentWord = words[currentIndex];
+    currWord.innerHTML = `<li> <strong> ${currentWord.word} </strong>
+    (${currentWord.pronunciation}) :  </br> 
+    <section>${currentWord.definition} </section>
+    [FR] : ${currentWord?.french} </li>`;
+    currentIndex--;
+    currIndex.innerHTML = `<h3> ${currentIndex} </h3>`
+}
+
+function next() { 
+    if (currentIndex >= words.length) {
+        currentIndex = 0; // Reset to the beginning
+    }
+
+    const currentWord = words[currentIndex];
+    currWord.innerHTML = `<li> <strong> ${currentWord.word} </strong>
+    (${currentWord.pronunciation}) :  </br> 
+    <section>${currentWord.definition} </section>
+    [FR] : ${currentWord?.french} </li>`;
+    currentIndex++;
+    currIndex.innerHTML = `<h3> ${currentIndex} </h3>`
 }
 
 // Start displaying words when the page loads

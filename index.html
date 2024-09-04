@@ -12,8 +12,20 @@
     <div class="container">
         <h1>Bible Dictionary</h1>
         <input type="text" id="searchInput" placeholder="Search for a word..." onkeyup="searchWord()">
-        <ul id="wordList">
+        
+        <h3>Active word</h3>
+        <ul id="currentWord">
             
+        </ul>
+
+        <div class="pagination">
+            <button class="beautiful-button" onclick="prev()" >Prev</button>
+            <div id="indexWord"> </div>
+            <button class="beautiful-button" onclick="next()">Next</button>
+        </div>
+
+        <ul id="wordList">
+        
         </ul>
     </div>
     <footer>
