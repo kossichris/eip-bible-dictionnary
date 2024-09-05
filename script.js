@@ -70,7 +70,7 @@ const words = [
     { word: "FAITH", pronunciation: "FAYTH", definition: "Trust in God and His promises, central to Christian belief.", french: "Confiance en Dieu et en ses promesses, centrale à la croyance chrétienne." },
     { word: "FAMINE", pronunciation: "FAM-in", definition: "A severe shortage of food, often seen as a judgment or test in the Bible.", french: "Une grave pénurie de nourriture, souvent considérée comme un jugement ou un test dans la Bible." },
     { word: "FEAST", pronunciation: "FEEST", definition: "A religious celebration, often involving a special meal.", french: "Une célébration religieuse, souvent impliquant un repas spécial." },
-    
+
     { word: "FIG TREE", pronunciation: "FIG TREE", definition: "A common fruit tree in the Bible, often used symbolically.", french: "Un arbre fruitier commun dans la Bible, souvent utilisé symboliquement." },
     { word: "FIRE", pronunciation: "FIRE", definition: "A symbol of God's presence, judgment, or purification.", french: "Un symbole de la présence de Dieu, du jugement ou de la purification." },
     { word: "FIRSTBORN", pronunciation: "FIRST-born", definition: "The first child born to a family, often holding special status in biblical narratives.", french: "Le premier enfant né dans une famille, souvent ayant un statut spécial dans les récits bibliques." },
@@ -182,14 +182,69 @@ const words = [
     { word: "SPIRIT", pronunciation: "SPIR-it", definition: "The non-physical part of a person, often regarded as immortal; also refers to the Holy Spirit.", french: "La partie non physique d'une personne, souvent considérée comme immortelle ; fait également référence au Saint-Esprit." },
     { word: "TESTAMENT", pronunciation: "TES-tuh-muhnt", definition: "A covenant or agreement; refers to the two main divisions of the Bible (Old and New Testament).", french: "Un pacte ou accord ; fait référence aux deux principales divisions de la Bible (Ancien et Nouveau Testament)." },
     { word: "TRINITY", pronunciation: "TRIN-i-tee", definition: "The Christian doctrine that God exists as three persons in one essence: Father, Son, and Holy Spirit.", french: "La doctrine chrétienne selon laquelle Dieu existe comme trois personnes en une seule essence : le Père, le Fils et le Saint-Esprit." },
-    { word: "WITNESS", pronunciation: "WIT-nuhs", definition: "A person who sees an event, typically a crime or accident, and can give a firsthand account.", french: "Une personne qui voit un événement, typiquement un crime ou un accident, et peut donner un compte rendu de première main." },
-    { word: "WORSHIP", pronunciation: "WUR-ship", definition: "The feeling or expression of reverence and adoration for a deity.", french: "Le sentiment ou l'expression de révérence et d'adoration pour une divinité." },
-    { word: "ZION", pronunciation: "ZYE-uhn", definition: "A hill in Jerusalem, symbolizing the Jewish homeland and the spiritual center of the Jewish faith.", french: "Une colline à Jérusalem, symbolisant la patrie juive et le centre spirituel de la foi juive." },
-    { word: "ZIONISM", definition: "Although not a biblical term, it relates to the biblical desire for the Jewish people to return to the land of Israel." },
-    { word: "ZIPPORAH", definition: "The wife of Moses." },
-    { word: "ZOAR", definition: "A city near Sodom and Gomorrah, where Lot fled during their destruction." },
-    { word: "ZODIAC", definition: "A circle of twelve constellations used in astrology (not a biblical concept, but often discussed in relation to the Bible)." }
-];
+    { "word": "VAIL", "pronunciation": "VAYL", "definition": "The veil or covering, often used in reference to the curtain in the Temple.", "french": "Le voile ou couverture, souvent utilisé en référence au rideau dans le Temple." },
+    { "word": "VALLEY", "pronunciation": "VAL-ee", "definition": "A low area between hills or mountains, often significant in biblical events.", "french": "Une basse région entre des collines ou des montagnes, souvent significative dans les événements bibliques." },
+    { "word": "VAIN", "pronunciation": "VAYN", "definition": "Worthless, without effect or value, often in the context of idolatry or false worship.", "french": "Inutile, sans effet ni valeur, souvent dans le contexte de l'idolâtrie ou du faux culte." },
+    { "word": "VENGEANCE", "pronunciation": "VEN-juhns", "definition": "Punishment inflicted in retaliation for an offense; often associated with God's justice.", "french": "Punition infligée en représailles à une offense; souvent associée à la justice de Dieu." },
+    { "word": "VESSEL", "pronunciation": "VES-uhl", "definition": "A container or instrument, often used metaphorically to refer to a person chosen by God.", "french": "Un récipient ou un instrument, souvent utilisé de manière métaphorique pour désigner une personne choisie par Dieu." },
+    { "word": "VEX", "pronunciation": "VEKS", "definition": "To disturb, trouble, or harass.", "french": "Déranger, troubler ou harceler." },
+    { "word": "VINE", "pronunciation": "VYN", "definition": "A plant that produces grapes, symbolic of Israel and spiritual fruitfulness.", "french": "Une plante qui produit des raisins, symbole d'Israël et de la fécondité spirituelle." },
+    { "word": "VINEYARD", "pronunciation": "VIN-yerd", "definition": "A plantation of grapevines, symbolic of the people of Israel or God's kingdom.", "french": "Une plantation de vignes, symbole du peuple d'Israël ou du royaume de Dieu." },
+    { "word": "VIOLENCE", "pronunciation": "VY-uh-luhns", "definition": "Physical force used to harm others, often condemned in the Bible.", "french": "Force physique utilisée pour nuire aux autres, souvent condamnée dans la Bible." },
+    { "word": "VIRGIN", "pronunciation": "VUR-jin", "definition": "A person, typically a woman, who has not engaged in sexual intercourse; significant in prophecies and narratives.", "french": "Une personne, généralement une femme, qui n'a pas eu de rapports sexuels; significative dans les prophéties et les récits." },
+    { "word": "VISION", "pronunciation": "VIZH-uhn", "definition": "A supernatural appearance, often conveying divine messages or prophecy.", "french": "Une apparition surnaturelle, souvent transmettant des messages divins ou des prophéties." },
+    { "word": "VOID", "pronunciation": "VOYD", "definition": "Empty, lacking substance or meaning.", "french": "Vide, manquant de substance ou de signification." },
+    { "word": "VOW", "pronunciation": "VOW", "definition": "A solemn promise made to God, often involving an act of devotion or abstention.", "french": "Une promesse solennelle faite à Dieu, impliquant souvent un acte de dévotion ou d'abstention." },
+    { "word": "WAGES", "pronunciation": "WAY-jiz", "definition": "Payment for work; in spiritual terms, often associated with the consequences of sin.", "french": "Paiement pour le travail; en termes spirituels, souvent associé aux conséquences du péché." },
+    { "word": "WALL", "pronunciation": "WAWL", "definition": "A physical barrier or a symbol of protection or division.", "french": "Une barrière physique ou un symbole de protection ou de division." },
+    { "word": "WANDER", "pronunciation": "WON-der", "definition": "To move about without a fixed course, often used in reference to the Israelites' journey in the wilderness.", "french": "Se déplacer sans un cours fixe, souvent utilisé en référence au voyage des Israélites dans le désert." },
+    { "word": "WARFARE", "pronunciation": "WAR-fair", "definition": "Conflict or struggle, both physical and spiritual.", "french": "Conflit ou lutte, tant physique que spirituelle." },
+    { "word": "WATCHMAN", "pronunciation": "WATCH-muhn", "definition": "A person who keeps vigil, often symbolic of spiritual vigilance.", "french": "Une personne qui veille, souvent symbole de vigilance spirituelle." },
+    { "word": "WATER", "pronunciation": "WAW-ter", "definition": "Essential for life, often symbolic of cleansing, renewal, or the Word of God.", "french": "Essentiel pour la vie, souvent symbolique de purification, de renouveau ou de la Parole de Dieu." },
+    { "word": "WAY", "pronunciation": "WAY", "definition": "A path or route, often used metaphorically for a course of life or conduct.", "french": "Un chemin ou une route, souvent utilisé de manière métaphorique pour un parcours de vie ou de conduite." },
+    { "word": "WEALTH", "pronunciation": "WEALTH", "definition": "Material riches, often discussed in the context of its proper use or the dangers of greed.", "french": "Richesses matérielles, souvent discutées dans le contexte de leur bonne utilisation ou des dangers de la cupidité." },
+    { "word": "WEEP", "pronunciation": "WEEP", "definition": "To shed tears; often associated with mourning or repentance.", "french": "Verser des larmes; souvent associé au deuil ou à la repentance." },
+    { "word": "WELL", "pronunciation": "WEL", "definition": "A deep hole dug for water, often significant in biblical narratives.", "french": "Un trou profond creusé pour l'eau, souvent significatif dans les récits bibliques." },
+    { "word": "WHALE", "pronunciation": "WAYL", "definition": "A large sea creature, most famously associated with Jonah's story.", "french": "Une grande créature marine, le plus souvent associée à l'histoire de Jonas." },
+    { "word": "WHEAT", "pronunciation": "WHEET", "definition": "A staple grain, often used symbolically for God's people or spiritual nourishment.", "french": "Un grain de base, souvent utilisé symboliquement pour le peuple de Dieu ou la nourriture spirituelle." },
+    { "word": "WICKED", "pronunciation": "WIK-id", "definition": "Evil or immoral behavior, often condemned in the Bible.", "french": "Comportement maléfique ou immoral, souvent condamné dans la Bible." },
+    { "word": "WILDERNESS", "pronunciation": "WIL-der-ness", "definition": "A desolate or barren area, significant as a place of testing or encounter with God.", "french": "Une zone désolée ou stérile, significative comme lieu d'épreuve ou de rencontre avec Dieu." },
+    { "word": "WINE", "pronunciation": "WINE", "definition": "A fermented drink made from grapes, symbolically used for blessing and judgment.", "french": "Une boisson fermentée à base de raisins, utilisée symboliquement pour la bénédiction et le jugement." },
+    { "word": "WISDOM", "pronunciation": "WIZ-duhm", "definition": "The ability to discern or judge what is true, right, or lasting; central to biblical teachings.", "french": "La capacité de discerner ou de juger ce qui est vrai, juste ou durable; centrale aux enseignements bibliques." },
+    { "word": "WITNESS", "pronunciation": "WIT-ness", "definition": "Someone who testifies to the truth, particularly in relation to God's works or Christ.", "french": "Quelqu'un qui témoigne de la vérité, en particulier en relation avec les œuvres de Dieu ou du Christ." },
+    { "word": "WOLF", "pronunciation": "WULF", "definition": "A predatory animal, often symbolic of danger or false prophets.", "french": "Un animal prédateur, souvent symbole de danger ou de faux prophètes." },
+    { "word": "WONDER", "pronunciation": "WUN-der", "definition": "A miraculous or extraordinary event, demonstrating God's power.", "french": "Un événement miraculeux ou extraordinaire, démontrant le pouvoir de Dieu." },
+    { "word": "WORD", "pronunciation": "WURD", "definition": "Refers to the Bible, God's communication to humanity, or Jesus Christ (the Word made flesh).", "french": "Se réfère à la Bible, la communication de Dieu à l'humanité, ou Jésus-Christ (la Parole faite chair)." },
+    { "word": "WORK", "pronunciation": "WURK", "definition": "Labor or deeds, often discussed in relation to faith and obedience.", "french": "Travail ou actions, souvent discutés en relation avec la foi et l'obéissance." },
+    { "word": "WORLD", "pronunciation": "WURLD", "definition": "The earth and its inhabitants, often contrasted with the kingdom of God.", "french": "La terre et ses habitants, souvent contrastés avec le royaume de Dieu." },
+    { "word": "WORSHIP", "pronunciation": "WUR-ship", "definition": "The act of showing reverence and adoration to God.", "french": "L'acte de montrer du respect et de l'adoration à Dieu." },
+    { "word": "WRATH", "pronunciation": "RATH", "definition": "Intense anger, often used to describe God's righteous indignation against sin.", "french": "Colère intense, souvent utilisée pour décrire l'indignation juste de Dieu contre le péché." },
+    { "word": "XERXES", "pronunciation": "ZURK-seez", "definition": "A Persian king mentioned in the Bible (known as Ahasuerus in some translations), particularly in the book of Esther.", "french": "Un roi perse mentionné dans la Bible (connu sous le nom d'Ahasuerus dans certaines traductions), notamment dans le livre d'Esther." },
+    { "word": "YAHWEH", "pronunciation": "YAH-way", "definition": "The covenant name of God, often rendered as 'LORD' in English translations.", "french": "Le nom d'alliance de Dieu, souvent rendu par 'LORD' dans les traductions anglaises." },
+    { "word": "YEA", "pronunciation": "YAY", "definition": "An old-fashioned word for 'yes,' used in affirmations.", "french": "Un mot désuet pour 'oui', utilisé dans les affirmations." },
+    { "word": "YEAR", "pronunciation": "YEER", "definition": "A unit of time; significant in various biblical contexts, such as the Year of Jubilee.", "french": "Une unité de temps; significatif dans divers contextes bibliques, comme l'Année du Jubilé." },
+    { "word": "YOKE", "pronunciation": "YOHK", "definition": "A wooden beam used to pair animals for work; symbolically represents submission or servitude.", "french": "Une poutre en bois utilisée pour accoupler des animaux au travail; représente symboliquement la soumission ou le service." },
+    { "word": "YOUNG", "pronunciation": "YUNG", "definition": "Refers to youth, often highlighted for its potential or vulnerability.", "french": "Se réfère à la jeunesse, souvent mise en avant pour son potentiel ou sa vulnérabilité." },
+    { "word": "YONDER", "pronunciation": "YON-der", "definition": "At some distance in the direction indicated; used in older translations of the Bible.", "french": "À une certaine distance dans la direction indiquée; utilisé dans les traductions plus anciennes de la Bible." },
+    { "word": "ZACHARIAH", "pronunciation": "ZAK-uh-RY-uh", "definition": "Several individuals in the Bible, including a prophet and the father of John the Baptist.", "french": "Plusieurs individus dans la Bible, y compris un prophète et le père de Jean-Baptiste." },
+    { "word": "ZADOK", "pronunciation": "ZAY-dok", "definition": "A high priest during the time of King David and Solomon.", "french": "Un grand prêtre durant le temps du roi David et de Salomon." },
+    { "word": "ZAREPHATH", "pronunciation": "ZAR-uh-fath", "definition": "A town where Elijah performed miracles, including the resurrection of a widow's son.", "french": "Une ville où Élie a accompli des miracles, y compris la résurrection du fils d'une veuve." },
+    { "word": "ZEAL", "pronunciation": "ZEEL", "definition": "Passionate ardor in the pursuit of a cause, often used in the context of devotion to God.", "french": "Ardeur passionnée dans la poursuite d'une cause, souvent utilisée dans le contexte de la dévotion à Dieu." },
+    { "word": "ZEBEDEE", "pronunciation": "ZEB-uh-dee", "definition": "The father of James and John, two of Jesus' disciples.", "french": "Le père de Jacques et Jean, deux des disciples de Jésus." },
+    { "word": "ZEBULUN", "pronunciation": "ZEB-yuh-luhn", "definition": "One of the twelve tribes of Israel, descended from Jacob's son Zebulun.", "french": "Une des douze tribus d'Israël, descendant du fils de Jacob, Zabulon." },
+    { "word": "ZECHARIAH", "pronunciation": "ZEK-uh-RY-uh", "definition": "A prophet who wrote the book of Zechariah, focusing on visions and prophecies about the future.", "french": "Un prophète qui a écrit le livre de Zacharie, se concentrant sur des visions et des prophéties concernant l'avenir." },
+    { "word": "ZEDEKIAH", "pronunciation": "ZEH-deh-kee-uh", "definition": "The last king of Judah before the Babylonian exile.", "french": "Le dernier roi de Juda avant l'exil babylonien." },
+    { "word": "ZEPHANIAH", "pronunciation": "ZEF-uh-NY-uh", "definition": "A prophet who warned of God's judgment and promised restoration in his book.", "french": "Un prophète qui a averti du jugement de Dieu et a promis la restauration dans son livre." },
+    { "word": "ZERUBBABEL", "pronunciation": "zuh-RUHB-uh-buhl", "definition": "A governor of Judah who led the first group of Jews returning from Babylonian exile and helped rebuild the Temple.", "french": "Un gouverneur de Juda qui a dirigé le premier groupe de Juifs revenant de l'exil babylonien et a aidé à reconstruire le Temple." },
+    { "word": "ZION", "pronunciation": "ZY-uhn", "definition": "A hill in Jerusalem, symbolically represents Jerusalem or the people of God.", "french": "Une colline à Jérusalem, représentant symboliquement Jérusalem ou le peuple de Dieu." },
+    { "word": "ZIONISM", "pronunciation": "ZY-uh-niz-uhm", "definition": "Although not a biblical term, it relates to the biblical desire for the Jewish people to return to the land of Israel.", "french": "Bien que ce ne soit pas un terme biblique, il se rapporte au désir biblique du peuple juif de retourner sur la terre d'Israël." },
+    { "word": "ZIPPORAH", "pronunciation": "ZIP-uh-rah", "definition": "The wife of Moses.", "french": "La femme de Moïse." },
+    { "word": "ZOAR", "pronunciation": "ZOH-ar", "definition": "A city near Sodom and Gomorrah, where Lot fled during their destruction.", "french": "Une ville près de Sodome et Gomorrhe, où Lot s'est enfui lors de leur destruction." },
+    { "word": "ZODIAC", "pronunciation": "ZOH-dee-ak", "definition": "A circle of twelve constellations used in astrology (not a biblical concept, but often discussed in relation to the Bible).", "french": "Un cercle de douze constellations utilisé en astrologie (pas un concept biblique, mais souvent discuté en relation avec la Bible)." },
+    { "word": "ZOPHAR", "pronunciation": "ZOH-far", "definition": "One of Job's three friends who spoke with him during his trials.", "french": "Un des trois amis de Job qui lui ont parlé pendant ses épreuves." },
+    { "word": "ZORAH", "pronunciation": "ZOR-uh", "definition": "The birthplace of Samson, located in the territory of Dan.", "french": "Le lieu de naissance de Samson, situé dans le territoire de Dan." },
+    { "word": "ZUZIMS", "pronunciation": "ZOO-zims", "definition": "A people mentioned in Genesis 14:5, conquered by Chedorlaomer.", "french": "Un peuple mentionné dans Genèse 14:5, conquis par Chedorlaomer." }
+]
 
 const wordList = document.getElementById('wordList');
 const currWord = document.getElementById('currentWord');
@@ -223,10 +278,10 @@ function displayWordsWithInterval() {
     }
 
     const currentWord = words[currentIndex];
-    currWord.innerHTML = `<li> <strong> ${currentWord.word } </strong>
-    (${ currentWord.pronunciation}) :  </br> 
-    <section>${ currentWord.definition } </section>
-    [FR] : ${ currentWord?.french } </li>`;
+    currWord.innerHTML = `<li> <strong> ${currentWord.word} </strong>
+    (${currentWord.pronunciation}) :  </br> 
+    <section>${currentWord.definition} </section>
+    [FR] : ${currentWord?.french} </li>`;
     currentIndex++;
     currIndex.innerHTML = `<h3> ${currentIndex} </h3>`
 
@@ -234,7 +289,7 @@ function displayWordsWithInterval() {
     intervalId = setTimeout(displayWordsWithInterval, 30000); // 300000 ms = 5 minutes
 }
 
-function prev(){
+function prev() {
     if (currentIndex >= words.length) {
         currentIndex = 1; // Reset to the beginning
     }
@@ -252,7 +307,7 @@ function prev(){
     currIndex.innerHTML = `<h3> ${currentIndex} </h3>`
 }
 
-function next() { 
+function next() {
     if (currentIndex >= words.length) {
         currentIndex = 1; // Reset to the beginning
     }
